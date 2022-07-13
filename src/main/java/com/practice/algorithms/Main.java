@@ -29,6 +29,14 @@ public class Main {
                 .addLivePattern(CellsPattern.GLIDER, Board.Position.CENTER);
         guiBoardService = new ConsoleGuiBoardService();
         guiBoardService.displayBoardState(board);
+
+        // navigation options
+        System.out.println("""
+        
+        Commands available:
+        * q: quit from the application
+        * next: manually simulate a new generation
+        * auto: automatically simulate new generations""");
     }
 
     private static void nextGeneration() {

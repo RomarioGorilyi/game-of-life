@@ -119,7 +119,7 @@ public class BasicGameService implements GameService {
         int yNeighbourCoordinateEnd = cellYCoordinate == board.getHeight() - 1 ? cellYCoordinate : cellYCoordinate + 1;
 
         List<Coordinates> neighboursCoordinates = IntStream.rangeClosed(
-                xNeighbourCoordinateStart, xNeighbourCoordinateEnd)
+                        xNeighbourCoordinateStart, xNeighbourCoordinateEnd)
                 .mapToObj(xNeighbourCoordinate ->
                         IntStream.rangeClosed(yNeighbourCoordinateStart, yNeighbourCoordinateEnd).mapToObj(
                                 yNeighbourCoordinate -> new Coordinates(xNeighbourCoordinate, yNeighbourCoordinate)))
